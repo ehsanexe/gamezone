@@ -6,15 +6,17 @@ import ReviewDetails from "../screens/reviewDetails";
 
 const { Navigator, Screen } = createStackNavigator();
 
-const HomeNavigator = () => (
-  <Navigator headerMode="screen">
-    <Screen name="Home" component={Home} />
+const HomeStack = () => (
+  <Navigator headerMode="screen" 
+    screenOptions={{
+      headerStyle: { backgroundColor: 'darkred',},
+      headerTintColor: '#fff',
+      headerTitleStyle: {fontWeight: 'bold',},
+    }}>
+    
+    <Screen name="Home" component={Home} options={ {title:'GameZone'}}/>
     <Screen name="ReviewDetails" component={ReviewDetails} />
   </Navigator>
 );
 
-export const AppNavigator = () => (
-  <NavigationContainer>
-    <HomeNavigator />
-  </NavigationContainer>
-);
+export default HomeStack

@@ -8,8 +8,8 @@ export const globalStyles = StyleSheet.create({
     color: '#333',
   },
   paragraph: {
-    marginVertical: 8,
-    lineHeight: 20,
+    fontSize: 18,
+    color: '#333',
   },
   container: {
     flex: 1,
